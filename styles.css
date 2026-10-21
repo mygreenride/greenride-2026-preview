@@ -81,3 +81,20 @@ select,input{width:100%;padding:14px;border:2px solid #000;border-radius:10px;ba
  .section{padding:52px 0}.call-band .shell{display:block}.call-band .btn{margin-top:14px;width:100%}
  h1{font-size:48px}.rate-panel{padding:18px}
 }
+
+/* Customer Links dropdown */
+.nav-more{position:relative;flex:0 0 auto}
+.nav-more summary{list-style:none;cursor:pointer;font-weight:800;font-size:14px;padding:9px 10px;border-radius:8px;white-space:nowrap}
+.nav-more summary::-webkit-details-marker{display:none}
+.nav-more summary::after{content:" ▾";font-size:.85em}
+.nav-more[open] summary,.nav-more summary:hover,.nav-more summary:focus{background:var(--yellow);color:#000}
+.nav-more-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:220px;background:#000;border:2px solid var(--yellow);border-radius:12px;padding:8px;box-shadow:var(--shadow);z-index:80}
+.nav-more-menu a{display:block!important;color:var(--yellow)!important;padding:10px 12px!important;border-radius:7px}
+.nav-more-menu a:hover,.nav-more-menu a:focus{background:var(--yellow)!important;color:#000!important}
+@media(max-width:980px){
+  .nav-more{position:static}
+  .nav-more-menu{position:absolute;left:16px;right:16px;top:74px;min-width:0}
+}
+@media(max-width:650px){
+  .nav-more-menu{position:static;margin-top:6px}
+}
